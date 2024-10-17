@@ -28,3 +28,8 @@ hru = HRU()
 hru.agregar_usuario(Usuario("UsuarioHRU1", 2))
 hru.agregar_usuario(Usuario("UsuarioHRU2", 1))
 hru.agregar_recurso(Recurso("TopSecret", 2))
+#Imprimimos los accesos de cada usuari
+resultado1 = hru.acceso_recurso(hru.usuarios[0], hru.recursos[0])
+print(resultado1)
+resultado2 = hru.acceso_recurso(hru.usuarios[1], hru.recursos[0])
+print(resultado2)
