@@ -15,6 +15,8 @@ class HRU:
     def agregar_recurso(self, recurso):
         self.recursos.append(recurso)
     def acceso_recurso(self, usuario, recurso):
+        if usuario not in self.usuarios: #verificamos si el usuario existe ants de dar acceso
+            return f"{usuario.nombre} no esta registrado en el sistema"
         if usuario.nivel_de_seguridad >= recurso.nivel:
             return f"{usuario.nombre} tiene acceso a {recurso.nombre}"
         else:
